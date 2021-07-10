@@ -9,9 +9,9 @@ https://ayushkul.github.io/react-movie-app
 [Youtube Tutorial - The Indian Dev](https://www.youtube.com/watch?v=_UXycMmVYj0)
 
 ### APIs Used
-[Open Weather APIs](https://openweathermap.org/)
+[The Open Movie Database APIs](http://www.omdbapi.com/)
 
-https://openweathermap.org/current
+Generate API key from : http://www.omdbapi.com/apikey.aspx
 
 ### API Info
 * Method: `GET`
