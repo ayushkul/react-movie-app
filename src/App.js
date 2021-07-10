@@ -59,12 +59,12 @@ const MovieListContainer = styled.div`
   flex-wrap: wrap;
   padding: 30px;
   gap: 25px;
-  justify-content: space-evenly;
+  justify-content: space-evenly;;
 `;
 const Placeholder = styled.img`
   width: 120px;
   height: 120px;
-  margin: 200px;
+  margin: 150px;
   opacity: 50%;
 `;
 
@@ -84,6 +84,7 @@ function App() {
   };
 
   const onTextChange = (e) => {
+    onMovieSelect("")
     clearTimeout(timeoutId);
     updateSearchQuery(e.target.value);
     const timeout = setTimeout(() => fetchData(e.target.value), 500);
@@ -105,7 +106,7 @@ function App() {
           />
         </SearchBox>
       </Header>
-      {selectedMovie && <MovieInfoComponent selectedMovie={selectedMovie} />}
+      {selectedMovie && <MovieInfoComponent selectedMovie={selectedMovie} onMovieSelect={onMovieSelect}/>}
       <MovieListContainer>
         {movieList?.length ? (
           movieList.map((movie, index) => (
